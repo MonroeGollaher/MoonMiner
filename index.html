@@ -33,7 +33,7 @@
           <div class="row">
             <div class="col">
               <h4>RPS (rupees per second):</h4>
-              <p id="">0</p>
+              <p id="rupeesRate">0</p>
             </div>
           </div>
         </div>
@@ -87,11 +87,11 @@
           <!-- Nested Row -->
           <div class="row">
             <div class="col-6">
-              <button type="button" class="btn btn-primary" onclick="buyHammer('megatonHammer')">Megaton Hammer: 15 Rupees</i></button>
-              <p>+5 rupees for each click</p>
+              <button type="button" class="btn btn-primary" onclick="buyHammer('megatonHammer')">Megaton Hammer:<p id="hammerCost"></p></i></button>
+              <p class="py-1">+5 rupees for each click</p>
             </div>
             <div class="col-6">
-              <button type="button" class="btn btn-primary" onclick="buySword('bigGoronSword')">Big Goron Sword: 75 Rupees</i></button>
+              <button type="button" class="btn btn-primary" onclick="buySword('bigGoronSword')">Big Goron Sword:<p id="swordCost"></p></i></button>
               <p>+10 rupees for each click</p>
             </div>
           </div>
@@ -103,12 +103,12 @@
           <h2>Auto Upgrades:</h2>
           <div class="row">
             <div class="col-6">
-              <button type="button" class="btn btn-primary" onclick="buyHammer('megatonHammer')">Bomb: 15 Rupees</i></button>
-              <p>+20 rupees for each click</p>
+              <button type="button" class="btn btn-primary" onclick="autoBomb('bomb')">Bomb: 500 </i></button>
+              <p>+20 rupees every 3 seconds</p>
             </div>
             <div class="col-6">
-              <button type="button" class="btn btn-primary" onclick="buySword('bigGoronSword')">Spin Attack: 75 Rupees</i></button>
-              <p>+50 rupees for each click</p>
+              <button type="button" class="btn btn-primary" onclick="autoSpin('spinAttack')">Spin Attack: 1000</i></button>
+              <p>+50 rupees every 3 seconds</p>
             </div>
           </div>
         </div>
