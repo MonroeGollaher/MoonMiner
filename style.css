@@ -1,0 +1,32 @@
+body { 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    background: url(imgs/zeldbg.jpg) no-repeat center center fixed;
+}
+
+header{ 
+
+} 
+
+p,
+.headerFont, 
+.leadFont {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.leadFont {
+    font-style: italic;
+}
+
+main{
+    flex-grow: 1;
+} 
+
+footer{ 
+
+}
+
+/* * {
+    outline: 1px solid red; 
+} */
