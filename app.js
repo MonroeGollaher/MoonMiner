@@ -3,6 +3,7 @@ let collectionInterval = 0
 let rpsValue = 0 
 let autoUpdate = 0 
 let priceIncrement = 15
+let autoPriceIncrement = 200
 
 let clickUpgrades = {
     megatonHammer: {
@@ -83,8 +84,11 @@ function update(){
     let hammerCostElem = document.getElementById("hammerCost")
     hammerCostElem.innerText = clickUpgrades.megatonHammer.price
 
-    let swordCostElem = document.getElementById("swordCost")
-    swordCostElem.innerText = clickUpgrades.bigGoronSword.price
+    let bombCostElem = document.getElementById("bombCost")
+    bombCostElem.innerText = autoUpgrades.bomb.price
+
+    let swordCostElem = document.getElementById("spinCost")
+    swordCostElem.innerText = autoUpgrades.spinAttack.price
 }
 
 function updateRPS(){
@@ -93,7 +97,7 @@ function updateRPS(){
 }
 
 function rupeesPerSecond(){
-    rpsValue = rupees / 60
+    rpsValue = rupees / 30
 }
 
 // USING INVENTORY ITEMS
@@ -137,6 +141,7 @@ function autoBomb(key){
     if(rupees >= autoUpgrades[key].price){
         autoUpgrades[key].quantity++
         rupees -= autoUpgrades[key].price
+        autoUpgrades[key].price += autoPriceIncrement
     }
     update()
 }
@@ -145,11 +150,11 @@ function autoSpin(key){
     if(rupees >= autoUpgrades[key].price){
         autoUpgrades[key].quantity++
         rupees -= autoUpgrades[key].price
+        autoUpgrades[key].price += autoPriceIncrement
     }
     update()
 }
 
 update()
 startInterval()
-console.log("Rupees:", rupees)
 
